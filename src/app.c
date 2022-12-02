@@ -30,6 +30,7 @@ void application(void)
     
     input_voltage0 = (float)adc_count0 * ADC_VREF / ADC_MAX_COUNT;
     input_voltage2 = (float)adc_count1 * ADC_VREF / ADC_MAX_COUNT;
+	input_voltage2 = 0;
 
     result_ready = true;    
 }
