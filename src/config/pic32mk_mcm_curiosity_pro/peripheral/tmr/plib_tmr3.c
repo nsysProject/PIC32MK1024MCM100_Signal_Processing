@@ -76,7 +76,7 @@ void TMR3_Initialize(void)
     TMR3 = 0x0;
 
     /*Set period */
-    PR3 = ((((CPU_CLOCK_FREQUENCY/2)/16)/TMR_3_FREQ) - 1);
+    PR3 = (uint32_t)((((CPU_CLOCK_FREQUENCY/2)/16)/TMR_3_ADC_TRIGGER_FREQ) - 1);
 
 //    IEC0SET = _IEC0_T3IE_MASK;
 //    Disable TMR-3 interrupt, since we want ADC interrupt only
