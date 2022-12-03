@@ -204,8 +204,8 @@ void SYS_Initialize ( void* data )
 
     ADCHS_Initialize();
 
-    TMR2_Initialize();    
-    TMR3_Initialize();
+    TMR2_Initialize();      // TIMER-2 is used to measure execution time, inside ADC interrupt
+    TMR3_Initialize();      // TIMER-3 is used to trigger ADC at fixed rate (50KHz))
 
 	UART5_Initialize();
 
